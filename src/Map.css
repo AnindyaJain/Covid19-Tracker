@@ -1,0 +1,16 @@
+.map {
+    min-width: 910px;
+    /* height: 500px; */
+    margin-top: 7px;
+    background-color:white;
+    padding: 3px;
+    border-radius: 0px;
+    /* margin-top: 50px; */
+    box-shadow: 0 0 8px -4px rgba(0, 0, 0, 0.5)
+}
+
+.map .leaflet-container {
+    height: 100%;
+    width: auto;
+}
+

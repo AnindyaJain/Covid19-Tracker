@@ -4,9 +4,14 @@ export const Container = styled.div`
   display: flex;
   background-color: #907163;
   padding: 10px 10px;
+  margin: 0px;
   //   min-width: 100%;
   height: 20 vh;
   flex-direction: column;
+  border: 1px lightgray solid;
+  box-shadow:  0 0 8px -4px rgba(0, 0, 0, 0.5);
+  border-radius: 6px;
+  background-color: black;
   @media (max-width: 1000px) {
     padding: 10px 10px;
   }
@@ -42,4 +47,6 @@ export const Number = styled.span`
   color: black;
   background-color: white;
   margin-bottom: 0px;
+  border: 1px lightgray solid;
+  border-radius: 10px;
 `;
