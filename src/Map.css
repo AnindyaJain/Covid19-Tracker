@@ -1,8 +1,9 @@
 .map {
+    /* background-blend-mode: screen; */
     min-width: 910px;
     /* height: 500px; */
     margin-top: 7px;
-    background-color:white;
+    /* background-image: radial-gradient(circle, #f7ff3f, #ffdb0b, #ffb500, #ff8f00, #fe6511, #f9660c, #f56606, #f06700, #e79000, #ceb700, #a2dc00, #49fd2e); */
     padding: 3px;
     border-radius: 0px;
     /* margin-top: 50px; */
@@ -10,7 +11,12 @@
 }
 
 .map .leaflet-container {
+    /* background-color: black; */
+    /* background-blend-mode: overlay; */
     height: 100%;
     width: auto;
+    /* mix-blend-mode: luminosity; */
 }
+
+
 

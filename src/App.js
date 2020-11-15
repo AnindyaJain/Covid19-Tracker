@@ -8,14 +8,19 @@ import FeaturesContainer from './containers/features';
 
 
 function App() {
+  
   return (
-    <>
+    <div className="main_container">
+      {/* <div className="fixed_container">
+        <HeaderContainer />
+      </div> */}
       <HeaderContainer />
+
       <FilterContainer />
       {/* <FeaturesContainer /> */}
       {/* <ListContainer />  */}
       {/* <FeaturesContainer/>  */}
-    </>
+    </div>
   );
 }
 

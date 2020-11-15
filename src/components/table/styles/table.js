@@ -7,14 +7,17 @@ export const Row = styled.div`
 `;
 
 export const Container = styled.div`
-    margin-top: 20px;
-    overflow: scroll;
-    height: 300px;
-    color: #6a5d5d;
-    & ${Row}: nth-child(odd) {
-        background-color: #f3f2f8;
-    }
-    border: 3px #222;
+  margin-top: 20px;
+  overflow: scroll;
+  height: 300px;
+  color: #6a5d5d;
+  & ${Row}: nth-child(odd) {
+    background-color: white;
+  }
+  & ${Row}: nth-child(even) {
+    background-color: #e6dedd;
+  }
+  border: 3px #222;
 `;
 
 export const Cell = styled.div`

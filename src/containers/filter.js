@@ -4,6 +4,7 @@ import useCountryData from '../utils/useCountryData'
 import List from "../components/list";
 import TableContainer from './table';
 import Map from '../Map'
+// import Map from '../heatmap'
 
 export default function FilterContainer() {
   const countries = useCountryData()[0];
@@ -22,7 +23,7 @@ export default function FilterContainer() {
 
     setCountry(countryCode);
     const url = 
-      countryCode === "worldwide" 
+      countryCode === "globe" 
       ? "https://disease.sh/v3/covid-19/all"
       : `https://disease.sh/v3/covid-19/countries/${countryCode}`;
       await fetch (url) 
@@ -43,13 +44,20 @@ export default function FilterContainer() {
     return (
       <>
         <Filter.Pane>
-          <Filter.Heading>Covid19-Tracker</Filter.Heading>
-          <Filter.Select defaultValue="Worldwide" onChange={onCountryChange} value={country}>
-            <Filter.Option  value="worldwide">
-              Worldwide
-            </Filter.Option>
+          <Filter.Heading>
+            <Filter.Image src="https://cdn3.iconfinder.com/data/icons/coronavirus-12/64/pandemic-disease-virus-infection-coronavirus-incident--covid19-512.png" />
+            <span style={{ color: "#cc0b0b" }}>Covid19-</span>Tracker
+          </Filter.Heading>
+          <Filter.Select
+            defaultValue="globe"
+            onChange={onCountryChange}
+            value={country}
+          >
+            <Filter.Option value="globe">Globe</Filter.Option>
             {countries.map((country) => (
-              <Filter.Option value={country.value} key={country.name}>{country.name}</Filter.Option>
+              <Filter.Option value={country.value} key={country.name}>
+                {country.name}
+              </Filter.Option>
             ))}
           </Filter.Select>
         </Filter.Pane>
@@ -57,33 +65,35 @@ export default function FilterContainer() {
           <List>
             <List.Frame>
               <List.Frame>
-                <List.Title>COUNTRY: {countryInfo.country}</List.Title>
+                <List.Title>{countryInfo.country}</List.Title>
                 <List.Content>
-                  <strong>Active:</strong> {countryInfo.active}
+                  <strong>Active Cases: </strong> {countryInfo.active}
                 </List.Content>
                 <List.Content>
-                  <strong>Cases:</strong> {countryInfo.cases} (+
+                  <strong>Total Cases: </strong> {countryInfo.cases} (+
                   {countryInfo.todayCases})
                 </List.Content>
                 <List.Content>
-                  <strong>Deaths:</strong> {countryInfo.deaths} (+
+                  <strong>Total Deaths: </strong> {countryInfo.deaths} (+
                   {countryInfo.todayDeaths})
                 </List.Content>
                 <List.Content>
-                  <strong>Recovered:</strong> {countryInfo.recovered} (+
+                  <strong>Total Recovered: </strong> {countryInfo.recovered} (+
                   {countryInfo.todayRecovered})
                 </List.Content>
               </List.Frame>
               <List.Frame>
-                <List.Title>LIVE BY COUNTRY</List.Title>
+                <List.Title>MOST INFECTED: BY COUNTRY</List.Title>
                 <TableContainer />
                 {/* <List.Content>total world statistics</List.Content> */}
               </List.Frame>
             </List.Frame>
           </List>
-                  
+
           <Map countries={mapCountries} center={mapCenter} zoom={mapZoom} />
+          {/* <Map  /> */}
+
         </Filter>
       </>
-    )
+    );
                   }

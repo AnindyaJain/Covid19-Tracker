@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, Pane, Heading, Select, Option } from './styles/filter';
+import { Container, Pane, Heading, Select, Option, Image } from './styles/filter';
 
 
 export default function Filter({ children, ...restProps }) {
@@ -17,4 +17,7 @@ Filter.Select = function FilterSelect({ children, ...restProps }) {
 };
 Filter.Option = function FilterOption({ children, ...restProps }) {
   return <Option {...restProps}>{children}</Option>;
+};
+Filter.Image = function FilteImage({ ...restProps }) {
+  return <Image {...restProps} />;
 };

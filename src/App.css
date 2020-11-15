@@ -1,4 +1,12 @@
 * {
   margin: 0;
+  
+}
+.main_container {
+  width: 100%;
+  background-image: linear-gradient(to left, #454ab1, #5564c2, #687ed2, #7e98e0, #97b2ee, #96c2f6, #99d1fb, #a2dfff, #8fe7ff, #7bf0ff, #6bf8ff, #64fff5);
+}
+.fixed_container {
+  position: fixed;
 }
 
