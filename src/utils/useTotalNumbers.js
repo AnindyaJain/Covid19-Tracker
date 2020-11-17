@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 
 export default function useTotalNumbers() {
     const [totalNumber, setTotalNumber] = useState([]);
+    const [isLoading, setIsLoading] = useState(true);
 
     useEffect(() => {
         async function fetchData() {
@@ -10,10 +11,11 @@ export default function useTotalNumbers() {
           .then((res) => res.json())
           .then((data) => {
             setTotalNumber(data);
+            setIsLoading(false);
           });
         }
         fetchData();
     }, []);
 
-    return totalNumber;
+    return [totalNumber, isLoading];
     }

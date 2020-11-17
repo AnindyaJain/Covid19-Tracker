@@ -1,20 +1,23 @@
 import React from "react";
 import useInfoByCountry from "../utils/useInfoByCountry";
-import Table from '../components/table'
+import Table from '../components/sidebar/table';
 
 export default function TableContainer() {
   
   const countries = useInfoByCountry([]);
   return (
-    <Table>
-        {countries.map((country) =>(
-            <Table.Row>
-                <Table.Cell>{country.country}</Table.Cell>
-                <Table.Cell>
-                    <strong>{country.cases}</strong>
-                </Table.Cell>
-            </Table.Row>
+    <>
+      <Table.Title>Live by Country</Table.Title>
+      <Table>
+        {countries.map((country) => (
+          <Table.Row>
+            <Table.Cell>{country.country}</Table.Cell>
+            <Table.Cell>
+              <strong>{country.cases}</strong>
+            </Table.Cell>
+          </Table.Row>
         ))}
-    </Table>
+      </Table>
+    </>
   );
 }

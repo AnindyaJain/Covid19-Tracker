@@ -3,34 +3,26 @@ import Header from '../components/header';
 import useTotalNumbers from '../utils/useTotalNumbers';
 
 export default function HeaderContainer() {
-  const totalNumber = useTotalNumbers();
+  const totalNumber = useTotalNumbers()[0];
+  const data = {
+    stats: {
+      "Confirmed": totalNumber.cases,
+      "Active": totalNumber.active,
+      "Deaths": totalNumber.deaths,
+      "Recovered": totalNumber.recovered,
+      "Critical": totalNumber.critical,
+      "Tests": totalNumber.tests
+    }
+  };
   return (
     <Header>
       <Header.Row>
-        <Header.Column>
-          <Header.Title>Confirmed</Header.Title>
-          <Header.Number>{totalNumber.cases}</Header.Number>
-        </Header.Column>
-        <Header.Column>
-          <Header.Title>Deaths</Header.Title>
-          <Header.Number>{totalNumber.deaths}</Header.Number>
-        </Header.Column>
-        <Header.Column>
-          <Header.Title>Recovered</Header.Title>
-          <Header.Number>{totalNumber.recovered}</Header.Number>
-        </Header.Column>
-        <Header.Column>
-          <Header.Title>Active</Header.Title>
-          <Header.Number>{totalNumber.active}</Header.Number>
-        </Header.Column>
-        <Header.Column>
-          <Header.Title>Critical</Header.Title>
-          <Header.Number>{totalNumber.critical}</Header.Number>
-        </Header.Column>
-        <Header.Column>
-          <Header.Title>Tests</Header.Title>
-          <Header.Number>{totalNumber.tests}</Header.Number>
-        </Header.Column>
+        {Object.keys(data.stats).map((key, i) => (
+          <Header.Column>
+            <Header.Title key={i}>{key}</Header.Title>
+            <Header.Number>{data.stats[key]}</Header.Number>
+          </Header.Column>
+        ))}
       </Header.Row>
     </Header>
   );

@@ -1,0 +1,28 @@
+.map {
+    /* background-blend-mode: screen; */
+    width: 100%;
+    margin: 1px;
+    margin-top: 10px;
+    
+    /* border-color: black; */
+    /* height: 00px; */
+    /* margcin-top: 7px; */
+    /* background-image: radial-gradient(circle, #f7ff3f, #ffdb0b, #ffb500, #ff8f00, #fe6511, #f9660c, #f56606, #f06700, #e79000, #ceb700, #a2dc00, #49fd2e); */
+    /* padding: 5px; */
+    
+    /* background-color: black; */
+    /* border-radius: 15px; */
+    /* margin-top: 50px; */
+    /* box-shadow: 0 0 8px -4px rgba(0, 0, 0, 0.5) */
+}
+
+.map .leaflet-container {
+    /* background-color: black; */
+    /* background-blend-mode: overlay; */
+    height: 100%;
+    width: 100%;
+    /* mix-blend-mode: luminosity; */
+}
+
+
+

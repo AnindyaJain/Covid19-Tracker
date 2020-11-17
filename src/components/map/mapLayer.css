@@ -1,0 +1,32 @@
+.info-flag img {
+  width: 100px;
+  border-radius: 5px;
+}
+
+.info-name {
+  font-size: 20px;
+  font-weight: bold;
+  color: #000000;
+}
+
+.info-container {
+  width: 150px;
+}
+
+.info-flag {
+  height: 80px;
+  width: 100%;
+  background-size: cover;
+}
+
+.info-confirmed,
+.info-recovered,
+.info-deaths {
+  font-size: 16px;
+  margin-top: 5px;
+  color: #000000;
+}
+
+.circle {
+  background-image: radial-gradient(circle, #f7ff3f, #ffdb0b, #ffb500, #ff8f00, #fe6511, #f9660c, #f56606, #f06700, #e79000, #ceb700, #a2dc00, #49fd2e);
+}

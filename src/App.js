@@ -1,27 +1,12 @@
 import './App.css';
-import FilterContainer from './containers/filter';
-import HeaderContainer from './containers/header';
-import ListContainer from './containers/list';
-import Map from './Map'
 import "leaflet/dist/leaflet.css";
-import FeaturesContainer from './containers/features';
-
+import MainPage from "./pages"
 
 function App() {
-  
-  return (
+    return (
     <div className="main_container">
-      {/* <div className="fixed_container">
-        <HeaderContainer />
-      </div> */}
-      <HeaderContainer />
-
-      <FilterContainer />
-      {/* <FeaturesContainer /> */}
-      {/* <ListContainer />  */}
-      {/* <FeaturesContainer/>  */}
+      <MainPage />
     </div>
   );
 }
-
 export default App;
