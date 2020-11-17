@@ -8,9 +8,7 @@ import Flexbox from '../components/flexbox';
 import Map from '../components/map'
 import LoaderContainer from "../containers/loader";
 
-
 export default function MainPage() {
-
   /* DATA OF SELECTED COUNTRY */
   const countries = useCountryData()[0];
   const [country, setCountry] = useState("worldwide");
@@ -42,8 +40,6 @@ export default function MainPage() {
         setMapZoom(4.5);
       }); 
   };
-  
-
   return (
     <Flexbox>
       <Flexbox.Column>
