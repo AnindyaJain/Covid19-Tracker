@@ -3,9 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@testing-library/jest-dom": "^5.11.5",
+    "@testing-library/jest-dom": "^5.11.6",
     "@testing-library/react": "^11.1.2",
     "@testing-library/user-event": "^12.2.2",
+    "firebase-tools": "^8.16.2",
     "leaflet": "^1.7.1",
     "leaflet-heatmap": "^1.0.0",
     "leaflet.heat": "^0.2.0",

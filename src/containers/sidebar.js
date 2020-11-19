@@ -3,14 +3,14 @@ import Summary from '../components/sidebar/summary';
 import TableContainer from './table';
 import LoaderContainer from './loader';
 
-export default function SummaryContainer ({countryInfo}) {
+export default function SidebarContainer ({countryInfo}) {
     const isLoading = true;
     const info = {
       country: {
-        "Active Cases": countryInfo.active,
-        "Total Cases": countryInfo.cases,
-        "Total Deaths": countryInfo.deaths,
-        "Total Recovered": countryInfo.recovered,
+        "Updated": countryInfo.updated,
+        "Today Cases": countryInfo.todayCases,
+        // "Today Deaths": countryInfo.toadyDeaths,
+        "Today Recovered": countryInfo.todayRecovered,
       }
     };
 

@@ -10,7 +10,7 @@ export default function LoaderContainer() {
         return (
             <Loader>
                 <div className="loader center">
-                <i className="fa fa-cog fa-spin" />
+                    <i className="fa fa-spinner fa-3x" aria-hidden="true" style={{color: "#ffffff"}} />
                 </div>
             </Loader>
         );

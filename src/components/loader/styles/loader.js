@@ -1,7 +1,8 @@
 import styled from "styled-components/macro";
 
 export const Container = styled.div`
-    max-height: 80px;
-    max-width: 90px;
-    margin-top: 30px;
+    height: 80px;
+    width: 90px;
+    align-item: center;
+    margin: 0 auto;
 `;

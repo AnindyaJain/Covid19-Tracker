@@ -4,26 +4,55 @@ import useTotalNumbers from '../utils/useTotalNumbers';
 
 export default function HeaderContainer() {
   const totalNumber = useTotalNumbers()[0];
-  const data = {
+  const dataOne = {
     stats: {
       "Confirmed": totalNumber.cases,
-      "Active": totalNumber.active,
-      "Deaths": totalNumber.deaths,
       "Recovered": totalNumber.recovered,
-      "Critical": totalNumber.critical,
-      "Tests": totalNumber.tests
     }
-  };
+  }
+  const dataTwo = {
+    stats: {
+      "Active": totalNumber.active,
+      "Critical": totalNumber.critical,
+    }
+  }
+  const dataThree = {
+    stats: {
+      "Deaths": totalNumber.deaths,
+      "Tests": totalNumber.tests,
+    }
+  }
+
   return (
     <Header>
       <Header.Row>
-        {Object.keys(data.stats).map((key, i) => (
-          <Header.Column>
-            <Header.Title key={i}>{key}</Header.Title>
-            <Header.Number>{data.stats[key]}</Header.Number>
-          </Header.Column>
-        ))}
+        <Header.Column>        
+            {Object.keys(dataOne.stats).map((key, i) => (            
+              <Header.Item key={i}>
+                <Header.Title key={i}>{key}</Header.Title>
+                <Header.Number>{dataOne.stats[key]}</Header.Number>
+              </Header.Item>
+            ))}        
+        </Header.Column>
+        <Header.Column>
+          {Object.keys(dataTwo.stats).map((key, i) => (
+            <Header.Item key={i}>
+              <Header.Title key={i}>{key}</Header.Title>
+              <Header.Number>{dataTwo.stats[key]}</Header.Number>
+            </Header.Item>
+          ))}
+        </Header.Column>
+        <Header.Column>
+          {Object.keys(dataThree.stats).map((key, i) => (
+            <Header.Item key={i}>
+              <Header.Title key={i}>{key}</Header.Title>
+              <Header.Number>{dataThree.stats[key]}</Header.Number>
+            </Header.Item>
+          ))}
+        </Header.Column>
       </Header.Row>
     </Header>
   );
-}
+
+}; 
+

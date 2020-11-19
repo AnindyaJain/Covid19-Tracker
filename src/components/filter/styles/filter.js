@@ -1,31 +1,28 @@
 import styled from 'styled-components/macro';
 
-
 export const Option = styled.option`
-  background-color: #f2efea;
+  background-color: rgba(211,211,211);
   color: black;
+  border: none;
   overflow: hidden;
-  box-border: 0;
   &:hover {
-    background-color: #c7beac;
+    background-color: #ffffff;
   }
 `;
 
 export const Select = styled.select`
-  font-family: Palatino, "Palatino LT STD", "Palatino Linotype", "Book Antiqua",
-    Georgia, serif;
   font-size: 20px;
+  font-weight: bold;
   height: max-content;
   width: 310px;
-  padding: 5px;
+  padding: 10px;
+  border: 1px rgb(0,191,255) solid;
   align-item: center;
-  margin:  0px 30px;
-  margin-top: 10px;
+  margin: 0 0 0 auto;
   cursor: pointer;
   outline: 0px;
-  border-radius: 15px;
-  background-color: #1b1b1b;
-  color: #f3f3f3;
+  background-color: rgb(0,191,255, 0);
+  color: rgb(0,191,255);
   @media (max-width: 1174px) {
     font-size: 14px;
     width: 210px;

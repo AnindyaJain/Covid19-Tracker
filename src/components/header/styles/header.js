@@ -1,55 +1,87 @@
 import styled from "styled-components/macro";
 
 export const Container = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  padding: 20px 20px;
-  height: 10vh;
-  margin-bottom: 20px;
-
+  aligh-items: center;
+  width: 100%;
   @media (max-width: 1174px) {
-    display: none;
+    // width: 100%;
+  }
+`;
+
+export const Item = styled.div`  
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0 5px 0;
+  background: rgba(127,255,0, 0.1);
+  width: 100%;
+  &:hover {
+    box-shadow: 0px 0px 8px -4px rgba(0, 0, 0, 1);
+  }
+  @media (max-width: 1174px) {
+    flex-direction: column;    
   }
 `;
 
 export const Column = styled.div`
-  padding-top: 10px;
-  border-bottom: 1px #F3F3F3 solid;
-  border-left: 1px #F3F3F3 solid;
-  box-shadow: 0 0 5px -4px ;
-  border-radius: 5px;
+  width: 100%;
   display: flex;
-  object-fit: cover;
   flex-direction: column;
-  text-align: center;
-  &:hover {
-    box-shadow: 0px 0px 8px -4px rgba(0, 0, 0, 0.5);
+  grid-gap: 5px;
+  padding: 10px;
+  margin: 5px;  
+  & ${Item}: nth-child(even) {
+    background: rgba(255,20,147, 0);
+    width: 80%;
+    margin: 0 auto;
+    transition: 0.4s;
+    &: hover {
+      transition: 0.4s;
+      width: 100%
+    }
   }
-  
-`;
-
-export const Row = styled.div`
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(182px, 1fr));
-  grid-gap: 20px;
-  margin: 10px;
-
-`;
-
-export const Title = styled.span`
-  font-family: Palatino, "Palatino LT STD", "Palatino Linotype", "Book Antiqua",
-                Georgia, serif;
-  font-size: 20px;
-  font-weight: bold;
-  color: #1B1B1B;
-  margin-bottom: 10px;
+  @media (max-width: 1174px) {
+    width: auto;
+    margin: 0;
+    padding: 0px;
+    & ${Item}: nth-child(even) {
+      width: auto;
+      }
+  }
 `;
 
 export const Number = styled.span`
-  font-size: 25px;
-  color: #000000;
-  font-weight: bold;
-  border-radius: 4px;
-
+  font-size: 20px;
+  color: rgb(173, 255, 47);
+  padding: 10px;
+  text-align: center;  
 `;
+
+export const Row = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  @media (max-width: 600px) {
+    flex-direction: column; 
+
+  }
+`;
+
+export const Title = styled.span`
+  font-size: 16px;
+  font-weight: bold;
+  color: #ffffff;
+  padding: 10px;
+  min-width: 40%;
+  @media (max-width: 1174px) {
+    flex-direction: column;
+    text-align: center;
+  }
+  @media (max-width: 600px) {
+    flex-direction: column;
+    text-align: center;
+  }
+`;
+
+

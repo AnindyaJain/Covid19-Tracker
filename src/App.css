@@ -1,8 +1,10 @@
 * {
   margin: 0;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 .main_container {
-  background-color: #f3f3f3;
+  /* background-color: #2F2F2F; */
+  background-color: #212121;
   height: 100%;
 }
 

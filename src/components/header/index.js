@@ -1,10 +1,9 @@
 import React from "react";
-import { Container, Row, Column, Title, Number } from "./styles/header";
+import { Container, Row, Column, Title, Number, Item } from "./styles/header";
 
 export default function Header({ children, ...restProps }) {
   return <Container {...restProps}>{children}</Container>;
-}
-
+};
 Header.Row = function HeaderRow({ children, ...restProps }) {
   return <Row {...restProps}>{children}</Row>;
 };
@@ -16,5 +15,8 @@ Header.Title = function HeaderTitle({ children, ...restProps }) {
 };
 Header.Number = function HeaderNumber({ children, ...restProps }) {
   return <Number {...restProps}>{children}</Number>;
+};
+Header.Item = function HeaderItem({ children, ...restProps }) {
+  return <Item {...restProps}>{children}</Item>;
 };
 

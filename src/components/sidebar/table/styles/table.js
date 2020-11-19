@@ -6,30 +6,26 @@ export const Row = styled.div`
   justify-content: space-between;
 `;
 
-export const Container = styled.div`
-  // margin-top: 20px;
-  overflow: scroll;
-  height: 300px;
-  color: #1b1b1b;
-  & ${Row}: nth-child(odd) {
-    background-color: #f3f3f3;
-  }
-  & ${Row}: nth-child(even) {
-    background-color: #e1e1e1;
-  }
-  border: 3px #222;
-`;
-
 export const Cell = styled.div`
   padding: 0.6rem;
+`;
+
+export const Container = styled.div`
+  overflow: scroll;
+  -webkit - scrollbar - track {
+  background - color: #000000;}
+  max-height: 75vh;
+  color: rgb(255,227,46);
+  & ${Row}: nth-child(odd) {
+    background: rgb(153,26,43, 0.1);
+  }
 `;
 
 export const Title = styled.p`
   font-size: 25px;
   font-weight: bold;
-  margin-top: 10px;
   max-height: auto;
-  color: black;
+  color: #ffffff;
   border-radius: 3px;
   object-fit: cover;
   text-align: center;
@@ -38,3 +34,4 @@ export const Title = styled.p`
     font-size: 20px;
   }
 `;
+

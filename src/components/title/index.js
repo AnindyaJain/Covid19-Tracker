@@ -13,6 +13,7 @@ export default function Title({ children, ...restProps }) {
 Title.Image = function TitleImage({ ...restProps }) {
   return <Image {...restProps} />;
 };
+
 Title.Heading = function TitleHeading({ children, ...restProps }) {
   return <Heading {...restProps}>{children}</Heading>;
 };

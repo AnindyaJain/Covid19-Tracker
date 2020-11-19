@@ -10,7 +10,7 @@
 }
 
 .info-container {
-  width: 150px;
+  width: 100%;
 }
 
 .info-flag {
@@ -27,6 +27,4 @@
   color: #000000;
 }
 
-.circle {
-  background-image: radial-gradient(circle, #f7ff3f, #ffdb0b, #ffb500, #ff8f00, #fe6511, #f9660c, #f56606, #f06700, #e79000, #ceb700, #a2dc00, #49fd2e);
-}
+

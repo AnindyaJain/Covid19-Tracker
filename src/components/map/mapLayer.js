@@ -2,7 +2,6 @@ import React from "react";
 import { Circle, Popup } from "react-leaflet";
 import '../map/mapLayer.css';
 
-
 const casesTypeColors = {
   cases: {
     hex: "#e60000",
@@ -20,7 +19,8 @@ const casesTypeColors = {
 
 export const mapLayer = (data, casesType = "cases") =>
   data.map((country) => (
-    <Circle
+    <Circle 
+      key={[country.countryInfo.lat, country.countryInfo.long]}
       center={[country.countryInfo.lat, country.countryInfo.long]}
       color={casesTypeColors[casesType].hex}
       fillColor={casesTypeColors[casesType].hex}

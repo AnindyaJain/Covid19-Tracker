@@ -10,9 +10,9 @@ export default function TableContainer() {
       <Table.Title>Live by Country</Table.Title>
       <Table>
         {countries.map((country) => (
-          <Table.Row>
-            <Table.Cell>{country.country}</Table.Cell>
-            <Table.Cell>
+          <Table.Row >
+            <Table.Cell key={country.countryInfo.iso2}>{country.country}</Table.Cell>
+            <Table.Cell key={country.cases}>
               <strong>{country.cases}</strong>
             </Table.Cell>
           </Table.Row>
