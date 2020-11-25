@@ -9,6 +9,7 @@ import Map from '../components/map'
 import LoaderContainer from "../containers/loader";
 
 export default function MainPage() {
+  const [error, setError] = useState(false);
   /* DATA OF SELECTED COUNTRY */
   const countries = useCountryData()[0];
   const [country, setCountry] = useState("globe");
@@ -16,8 +17,8 @@ export default function MainPage() {
   const [countryInfo, setCountryInfo] = useState([]);
   /*  DATA TO PLOT MAP */
   const mapCountries = useCountryData()[1];
-  const [mapCenter, setMapCenter] = useState([34, -40]);
-  const [mapZoom, setMapZoom] = useState(3);
+  const [mapCenter, setMapCenter] = useState([50, -40]);
+  const [mapZoom, setMapZoom] = useState(3.5);
 
   const onCountryChange = async (event) => {
     const countryCode = event.target.value;
@@ -36,7 +37,9 @@ export default function MainPage() {
             ];
             setMapCenter(location);
             setMapZoom(4.5);
-          }); 
+          }).catch((error)=>{setError(true) 
+          return <h1>Something went wrong!!</h1>
+          });
     } else {
       setCountry("globe");
     }
@@ -52,9 +55,8 @@ export default function MainPage() {
         <SidebarContainer countryInfo={countryInfo} />
         <Flexbox.Column>
           <Filter.Select
-            defaultValue="globe"
             onChange={onCountryChange}
-            value={country}
+            value= {country}
           >
             <Filter.Option value="globe">Globe</Filter.Option>
             {countries.map((country) => (

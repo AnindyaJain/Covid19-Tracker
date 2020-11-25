@@ -1,6 +1,6 @@
 import React from "react";
 import useInfoByCountry from "../utils/useInfoByCountry";
-import Table from '../components/sidebar/table';
+import Table from '../components/table';
 
 export default function TableContainer() {
   

@@ -46,6 +46,9 @@ export const Column = styled.div`
     padding: 0px;
     & ${Item}: nth-child(even) {
       width: auto;
+      &: hover {
+      width: auto;
+    }
       }
   }
 `;

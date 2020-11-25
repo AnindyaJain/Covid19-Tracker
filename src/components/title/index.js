@@ -1,7 +1,6 @@
 import React from "react";
 import {
   Container,
-  Frame,
   Heading,
   Image,
 } from "./styles/title";

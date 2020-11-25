@@ -1,13 +1,12 @@
 import { useState, useEffect } from "react";
 
-export default function useTotalNumbers() {
-    const [totalNumber, setTotalNumber] = useState([]);
+export default function useTotalNumbers(url, defaultValue=[]) {
+    const [totalNumber, setTotalNumber] = useState(defaultValue);
     const [isLoading, setIsLoading] = useState(true);
 
     useEffect(() => {
         async function fetchData() {
-        console.log("Fetching Data");
-        const data = await fetch("https://disease.sh/v3/covid-19/all")
+        const data = await fetch(url)
           .then((res) => res.json())
           .then((data) => {
             setTotalNumber(data);

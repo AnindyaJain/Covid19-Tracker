@@ -1,5 +1,5 @@
 import React from 'react';
-import Summary from '../components/sidebar/summary';
+import Summary from '../components/summary';
 import TableContainer from './table';
 import LoaderContainer from './loader';
 
@@ -7,10 +7,10 @@ export default function SidebarContainer ({countryInfo}) {
     const isLoading = true;
     const info = {
       country: {
-        "Updated": countryInfo.updated,
         "Today Cases": countryInfo.todayCases,
-        // "Today Deaths": countryInfo.toadyDeaths,
         "Today Recovered": countryInfo.todayRecovered,
+        "Population": countryInfo.population,
+        "Active per one million": countryInfo.activePerOneMillion,
       }
     };
 

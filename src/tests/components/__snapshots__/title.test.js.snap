@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Title /> renders the <Title /> with populated data 1`] = `
+<div
+  class="title__Container-sc-19e1hlj-0 iPLRZX"
+>
+  <div
+    class="title__Heading-sc-19e1hlj-1 kgLoiP"
+  >
+    Covid19Tracker
+  </div>
+</div>
+`;

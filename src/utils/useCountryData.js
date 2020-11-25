@@ -6,7 +6,7 @@ export default function useCountryData() {
 
     useEffect(() => {
     async function fetchCountriesData() {
-        const data = await fetch("https://disease.sh/v3/covid-19/countries")
+        await fetch("https://disease.sh/v3/covid-19/countries")
             .then((res) => res.json())
             .then((data) => {
                 setMapCountries(data);
